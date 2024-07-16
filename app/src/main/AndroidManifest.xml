@@ -13,6 +13,15 @@
         android:theme="@style/Theme.HealthTracker"
         tools:targetApi="31">
         <activity
+            android:name=".pedoMeterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BMIActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CardActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
