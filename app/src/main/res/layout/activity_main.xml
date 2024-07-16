@@ -12,9 +12,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_width="550dp"
+        android:layout_height="550dp"
         android:layout_gravity="center"
-         android:layout_marginTop="150dp"
-        app:srcCompat="@drawable/undraw_Meditation_re_gll0" />
+       android:layout_weight="1"
+        app:srcCompat="@drawable/undraw_meditation_re_gll0" />
 </LinearLayout>

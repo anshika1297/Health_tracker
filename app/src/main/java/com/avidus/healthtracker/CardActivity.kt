@@ -17,14 +17,14 @@ class CardActivity : AppCompatActivity() {
 
         val bMIbutton = binding.imageBMI
         bMIbutton.setOnClickListener {
-            val intent = Intent(this, BMIActivity::class.java)
-            startActivity(intent)
+            val bmiIntent = Intent(this, BMIActivity::class.java)
+            startActivity(bmiIntent)
         }
 
         val pedoSensor= binding.imagePedoMeter
         pedoSensor.setOnClickListener {
-            val intent = Intent(this, pedoMeterActivity::class.java)
-            startActivity(intent)
+            val pedoSensorIntent = Intent(this, pedoMeterActivity::class.java)
+            startActivity(pedoSensorIntent)
         }
     }
 }

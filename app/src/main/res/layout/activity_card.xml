@@ -8,30 +8,55 @@
     android:background="@color/white"
     tools:context=".CardActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:text="Your Health Tracker"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@id/cardView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="180dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="216dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
         <ImageView
-
             android:id="@+id/imageBMI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/undraw_fitness_tracker_3033" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="BMI Calculator" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="180dp"
+        android:layout_height="300dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="216dp"
         android:layout_marginEnd="30dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,11 +69,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/undraw_fitness_stats_sht6" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Pedo Meter" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="180dp"
+        android:layout_height="300dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="40dp"
@@ -56,18 +91,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <ImageView
-            android:id="@+id/imageHealthTips"
+            android:id="@+id/imageTips"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/undraw_Healthy_lifestyle_re_ifwg" />
+            app:srcCompat="@drawable/undraw_healthy_lifestyle_re_ifwg" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Health Tips" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="180dp"
+        android:layout_height="300dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="30dp"
@@ -81,6 +126,17 @@
             android:id="@+id/imageYoga"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/undraw_Meditation_re_gll0" />
+            app:srcCompat="@drawable/undraw_meditation_re_gll0" />
+
+         <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:text="Yoga | Medition" />
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
