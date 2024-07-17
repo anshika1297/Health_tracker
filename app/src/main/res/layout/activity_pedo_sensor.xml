@@ -79,6 +79,17 @@
         app:layout_constraintTop_toTopOf="@id/circularProgressBar"
         app:layout_constraintVertical_bias="0.592" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+
+        android:layout_marginBottom="32dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
     <TextView
         android:id="@+id/remainSteps"
         android:layout_width="wrap_content"
@@ -101,15 +112,15 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:gravity="center"
-        android:text="Reset Step Count"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="800dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+
         android:backgroundTint="#eabb04"
-        android:textSize="18dp"
+        android:layout_gravity="center"
+        android:text="Reset Step Count"
         android:textColor="#ffffff"
+        android:textSize="18dp"
         android:textStyle="bold"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -118,6 +129,8 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="145dp"
         tools:layout_editor_absoluteY="862dp" />
+</LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
