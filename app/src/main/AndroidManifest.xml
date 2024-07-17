@@ -2,6 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter "
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer "
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +24,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthTracker"
         tools:targetApi="31">
+        <activity
+            android:name=".YogaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HeathTipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PedoSensorActivity"
+            android:exported="false" />
         <activity
             android:name=".pedoMeterActivity"
             android:exported="false" />

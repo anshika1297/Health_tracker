@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".HeathTipsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Health Tips"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginVertical="50dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="280dp"
+        android:layout_height="245dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="275dp"
+            android:layout_height="240dp"
+            app:srcCompat="@drawable/undraw_yoga_re_i5ld" />
+    </androidx.cardview.widget.CardView>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="30dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Manage stress through relaxation techniques."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Eat a balanced diet with a variety of foods."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="18dp"
+                    android:text="- Drink plenty of water to stay hydrated."
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Exercise regularly to maintain a healthy body."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Get enough sleep to rejuvenate your body."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Practice good hygiene to prevent illnesses."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Avoid smoking and limit alcohol consumption."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Maintain a healthy weight through diet and exercise."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Schedule regular medical check-ups."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Practice safe sex to protect your health."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Stay socially connected with friends and family."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Limit your intake of processed foods and sugars."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Practice mindfulness and meditation."
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:padding="16dp"
+                    android:text="- Wear sunscreen to protect your skin."
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PedoSensorActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Steps Calculator"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+     />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        android:layout_width="381dp"
+        android:layout_height="378dp"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        app:cpb_background_progressbar_color="#f6ebbb"
+        app:cpb_background_progressbar_width="50dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="#eabb04"
+        app:cpb_progressbar_width="20dp"
+        app:cpb_round_border="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <TextView
+        android:id="@+id/steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:text="0"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/circularProgressBar"
+        app:layout_constraintEnd_toEndOf="@id/circularProgressBar"
+
+        app:layout_constraintStart_toStartOf="@id/circularProgressBar"
+        app:layout_constraintTop_toTopOf="@id/circularProgressBar"
+        app:layout_constraintVertical_bias="0.586" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="/5000"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="@id/circularProgressBar"
+        app:layout_constraintEnd_toEndOf="@id/circularProgressBar"
+        app:layout_constraintStart_toStartOf="@id/circularProgressBar"
+        app:layout_constraintTop_toTopOf="@id/circularProgressBar"
+        app:layout_constraintVertical_bias="0.592" />
+
+    <TextView
+        android:id="@+id/remainSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text=" 5000 Steps more to Reach Goal"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Reset Step Count"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="800dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="862dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

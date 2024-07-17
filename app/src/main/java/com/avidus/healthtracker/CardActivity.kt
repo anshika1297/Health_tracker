@@ -23,8 +23,20 @@ class CardActivity : AppCompatActivity() {
 
         val pedoSensor= binding.imagePedoMeter
         pedoSensor.setOnClickListener {
-            val pedoSensorIntent = Intent(this, pedoMeterActivity::class.java)
-            startActivity(pedoSensorIntent)
+        val pedoMeter= Intent(this, PedoSensorActivity::class.java)
+            startActivity(pedoMeter)
+        }
+
+        val healthTips= binding.imageTips
+        healthTips.setOnClickListener {
+            val healthTips= Intent(this, HeathTipsActivity::class.java)
+            startActivity(healthTips)
+        }
+
+        val yoga= binding.imageYoga
+        yoga.setOnClickListener {
+            val yoga= Intent(this, YogaActivity::class.java)
+            startActivity(yoga)
         }
     }
 }
