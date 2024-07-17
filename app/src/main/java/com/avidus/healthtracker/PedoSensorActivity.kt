@@ -3,6 +3,7 @@ package com.avidus.healthtracker
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.avidus.healthtracker.databinding.ActivityPedoSensorBinding
+import com.mikhaellopez.circularprogressbar.CircularProgressBar
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -24,9 +26,11 @@ class PedoSensorActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var binding: ActivityPedoSensorBinding
     private lateinit var sharedPreferences: SharedPreferences
     private val dateFormat = SimpleDateFormat("yyyyMMdd", Locale.getDefault())
+    private lateinit var circularProgressBar: CircularProgressBar
 
     companion object {
         private const val PERMISSION_REQUEST_ACTIVITY_RECOGNITION = 1
+        private const val STEP_GOAL = 5000
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +41,9 @@ class PedoSensorActivity : AppCompatActivity(), SensorEventListener {
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         sharedPreferences = getSharedPreferences("PedoSensorPrefs", Context.MODE_PRIVATE)
+
+        circularProgressBar = findViewById(R.id.circularProgressBar)
+        circularProgressBar.progressMax = STEP_GOAL.toFloat()
 
         // Check for permission
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACTIVITY_RECOGNITION)
@@ -90,8 +97,12 @@ class PedoSensorActivity : AppCompatActivity(), SensorEventListener {
             val currentSteps = steps - previousTotalSteps
 
             binding.steps.text = currentSteps.toInt().toString()
-            val remain= (5000-currentSteps.toInt()).toString()
-            binding.remainSteps.text="$remain Steps more to Reach Goal"
+            val remain = (STEP_GOAL - currentSteps.toInt()).toString()
+            binding.remainSteps.text = "$remain Steps more to Reach Goal"
+
+            // Update CircularProgressBar
+            circularProgressBar.setProgressWithAnimation(currentSteps.toFloat())
+
             // Update UI or perform actions with the step count
         }
     }
@@ -142,5 +153,6 @@ class PedoSensorActivity : AppCompatActivity(), SensorEventListener {
         }
         binding.steps.text = "0"
         binding.remainSteps.text = "5000 Steps more to Reach Goal"
+        circularProgressBar.setProgressWithAnimation(0f)
     }
 }
